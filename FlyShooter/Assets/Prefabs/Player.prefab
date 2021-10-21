@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2856497006786357573}
   - component: {fileID: 7909567859841309647}
   - component: {fileID: 2543509137014811621}
+  - component: {fileID: 2015899002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -182,6 +183,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429fe8afd9bae6b40b8855012998c24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aus: {fileID: 0}
+  shootingSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   moveSpeed: 10
   shootingPoint: {fileID: 7149742410939308884}
   projectile: {fileID: 2120812529917453150, guid: 181aa4a6fec377643a89014a9d42653a, type: 3}
+--- !u!95 &2015899002
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970408557551333744}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09358bfa0587e9448ad38166aadb494e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

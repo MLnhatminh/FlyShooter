@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e608737f670c03b4798a770e197e9cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
-  timeToDestroy: 3
+  hitVFX: {fileID: 4794043405585894037, guid: 37138c0c33167b04fa1fb90b7f5a794f, type: 3}
+  aus: {fileID: 0}
+  deathSound: {fileID: 0}
+  bulletSpeed: 15
+  timeToDestroy: 1
 --- !u!212 &5437177260761208394
 SpriteRenderer:
   m_ObjectHideFlags: 0

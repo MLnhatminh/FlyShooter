@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8391756016477132885}
   - component: {fileID: 5491981390860030074}
   - component: {fileID: 208007358597115177}
+  - component: {fileID: 3798915676970579734}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -129,7 +130,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -152,3 +153,22 @@ PolygonCollider2D:
       - {x: 0.26498273, y: -0.044572353}
       - {x: 0.48642632, y: 0.26475763}
       - {x: 0.47973984, y: 0.40275145}
+--- !u!95 &3798915676970579734
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595550927379833041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07c9c8b2d4b88fe44b47bee27a9a9ff8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

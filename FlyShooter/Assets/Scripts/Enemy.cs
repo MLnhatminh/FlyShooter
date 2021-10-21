@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    Animator m_animator;
+
+    GameController m_gameController;
 
     public float moveSpeed;
 
@@ -13,7 +16,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
-        
+        m_gameController = FindObjectOfType<GameController>();
+        m_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,8 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("DeadZone"))
         {
             Destroy(gameObject, 0.2f);
+            m_gameController.SetGameOverState(true);
+            m_animator.SetTrigger("Destroy");
         }
     }
 }

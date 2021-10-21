@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    UIManager _uiManager;
 
     public GameObject enemy;
     public float spawnTime;
@@ -15,12 +17,21 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _uiManager = FindObjectOfType<UIManager>();
+        _uiManager.gameScore.text = "Score : 0";
         m_spawnTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (m_isGameOver)
+        {
+            _uiManager.ShowGameOverPanel(m_isGameOver);
+            m_spawnTime = 0;
+            return;
+        }
+
         m_spawnTime -= Time.deltaTime;
         if (m_spawnTime <= 0)
         {
@@ -29,9 +40,14 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+
     void SpawnEnemy()
     {
-        float randXPos = Random.Range(-7.0f, 7.0f);
+        float randXPos = Random.Range(-5.0f, 5.0f);
         Vector2 spawnPos = new Vector2(randXPos, 6.0f);
 
         if (enemy)
@@ -62,6 +78,8 @@ public class GameController : MonoBehaviour
     public void ScoreIncrement()
     {
         m_score ++;
+        _uiManager.UpdateGameScore("Score : "+ m_score);
+        //// Debug.Log(m_score);
     }
 
     public bool IsGameOver()
